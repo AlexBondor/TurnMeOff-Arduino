@@ -1,0 +1,13 @@
+basic usage, polling
+	- GET an url of the form   < turnMeOff.com/get_status?id=ID >, where ID is the User ID, DID is Device ID
+	- respond with a JSON containing each device and a value (0-255):    {"DID1": 0, "DID2":255, "DID3": 123}
+
+
+
+PAIRING
+Pair a new device, "BUMP" style. Pressing on a sensor/outpur Pair button will make this request to the server
+	- GET < turnMeOff.com/register_device?id=ID&device_id=DID >
+
+After this, you can see in the web app that the device DID made a pairing request
+In the web app choose this device, and configure it: Input/Ouput, location, type (wall socket/light bulb)
+
